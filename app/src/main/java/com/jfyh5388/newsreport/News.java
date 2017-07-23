@@ -8,7 +8,7 @@ import android.graphics.Bitmap;
 
 public class News {
 
-    //private Bitmap mBitmap;
+    private Bitmap mBitmap;
 
     /** Time of the earthquake */
     private String mCategory;
@@ -20,18 +20,18 @@ public class News {
 
     private String mDocurl;
 
-    public News( String fCategory, String fTitle, String fTime, String fUrl)
+    public News(Bitmap fBitmap, String fCategory, String fTitle, String fTime, String fUrl)
     {
-//        mBitmap = fBitmap;
+        mBitmap = fBitmap;
         mCategory = fCategory;
         mTitle = fTitle;
         mTime = fTime;
         mDocurl = fUrl;;
     }
-//    public Bitmap getmImgurl()
-//    {
-//        return mBitmap;
-//    }
+    public Bitmap getmBitmap()
+    {
+        return mBitmap;
+    }
     public String getmTitle()
     {
         return mTitle;

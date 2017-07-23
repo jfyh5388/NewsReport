@@ -44,9 +44,9 @@ public class NewsAdapter extends ArrayAdapter<News> {
         // Get the {@link AndroidFlavor} object located at this position in the list
         final News currentEarthquake = getItem(position);
 
-      //  Bitmap bitmap = currentEarthquake.getmImgurl();
-    //    ImageView img = (ImageView) listItemView.findViewById(R.id.image);
-    //    img.setImageBitmap(bitmap);
+        Bitmap bitmap = currentEarthquake.getmBitmap();
+        ImageView img = (ImageView) listItemView.findViewById(R.id.image);
+        img.setImageBitmap(bitmap);
 
 
         String category = currentEarthquake.getmCategory();

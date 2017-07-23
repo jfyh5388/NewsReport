@@ -173,14 +173,14 @@ public class QueryUtils {
             for (int i = 0; i < features.length(); i++) {
                 JSONObject c = features.getJSONObject(i);
 
-            //    String imgurl = c.getString("imgurl");
-           //     Bitmap bitmap = returnBitMap(imgurl);
+                String imgurl = c.getString("imgurl");
+                Bitmap bitmap = returnBitMap(imgurl);
                 String category = c.getString("channelname");
                 String title = c.getString("title");
                 String time = c.getString("time");
                 String docurl = c.getString("docurl");
 
-                news.add(new News( category, title, time, docurl));
+                news.add(new News(bitmap, category, title, time, docurl));
             }
 
         } catch (JSONException e) {
