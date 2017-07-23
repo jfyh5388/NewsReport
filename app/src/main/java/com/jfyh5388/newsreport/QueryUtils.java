@@ -4,6 +4,7 @@ import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.text.TextUtils;
 import android.util.Log;
+import android.widget.ImageView;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -172,10 +173,13 @@ public class QueryUtils {
             JSONArray features = reader.getJSONArray("list");
             for (int i = 0; i < features.length(); i++) {
                 JSONObject c = features.getJSONObject(i);
-
-                String imgurl = c.getString("imgurl");
-                Bitmap bitmap = returnBitMap(imgurl);
                 String category = c.getString("channelname");
+                String imgurl = c.getString("imgurl");
+                Bitmap bitmap = null;
+                if(!imgurl.equals(""))  //图像链接不为空
+                    bitmap = returnBitMap(imgurl);
+
+
                 String title = c.getString("title");
                 String time = c.getString("time");
                 String docurl = c.getString("docurl");

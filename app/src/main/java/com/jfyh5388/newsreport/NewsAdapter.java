@@ -42,14 +42,16 @@ public class NewsAdapter extends ArrayAdapter<News> {
         }
 
         // Get the {@link AndroidFlavor} object located at this position in the list
-        final News currentEarthquake = getItem(position);
+        final News currentNews= getItem(position);
 
-        Bitmap bitmap = currentEarthquake.getmBitmap();
+        Bitmap bitmap = currentNews.getmBitmap();
         ImageView img = (ImageView) listItemView.findViewById(R.id.image);
         img.setImageBitmap(bitmap);
+        if(bitmap == null)
+            img.setVisibility(View.GONE);
 
 
-        String category = currentEarthquake.getmCategory();
+        String category = currentNews.getmCategory();
 
         // Find the TextView in the earthquake_list_item.xmlst_item.xml layout with the ID version_name
         TextView categoryView = (TextView) listItemView.findViewById(R.id.category);
@@ -59,13 +61,13 @@ public class NewsAdapter extends ArrayAdapter<News> {
 
 
 
-        String title  = currentEarthquake.getmTitle();
+        String title  = currentNews.getmTitle();
 
         TextView titleView = (TextView) listItemView.findViewById(R.id.title);
         titleView.setText(title);
 
         // 根据地震时间（以毫秒为单位）创建一个新的 Date 对象
-        String time = currentEarthquake.getmTime();
+        String time = currentNews.getmTime();
 
         // 找到视图 ID 为 date 的 TextView
         TextView timeView = (TextView) listItemView.findViewById(R.id.time);

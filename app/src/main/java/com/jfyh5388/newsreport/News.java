@@ -38,7 +38,39 @@ public class News {
     }
     public String getmCategory()
     {
-        return mCategory;
+        String catChinese = "";
+        switch (mCategory) {
+            case "war":
+                catChinese = "战争";
+                break;
+            case "sport":
+                catChinese = "休育";
+                break;
+            case "tech":
+                catChinese = "科技";
+                break;
+            case "edu":
+                catChinese = "教育";
+                break;
+            case "ent":
+                catChinese = "娱乐";
+                break;
+            case "money":
+                catChinese = "金融";
+                break;
+            case "gupiao":
+                catChinese = "股票";
+                break;
+            case "travel":
+                catChinese = "旅游";
+                break;
+            case "lady":
+                catChinese = "女人";
+                break;
+            default:
+                break;
+        }
+        return catChinese;
     }
     public String getmTime()
     {

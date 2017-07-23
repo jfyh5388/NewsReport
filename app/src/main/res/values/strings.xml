@@ -2,4 +2,52 @@
     <string name="app_name">NewsReport</string>
     <string name="no_news">No news found.</string>
     <string name="no_internet">No internet connection.</string>
+    <string name="settings_menu_item">类别</string>
+    <!-- Settings Activity Title [CHAR LIMIT=NONE] -->
+    <string name="settings_title">类别设置</string>
+
+    <!-- Strings For Order-By Preference [CHAR LIMIT=30] -->
+    <string name="settings_category_by_label">类别</string>
+    <string name="settings_category_by_key" translatable="false">category_by</string>
+    <string name="settings_category_by_default" translatable="false">@string/settings_category_by_war_value</string>
+
+    <!-- Label for order-by magnitude option [CHAR LIMIT=20] -->
+    <string name="settings_category_by_war_label">战争</string>
+    <string name="settings_category_by_war_value" translatable="false">war</string>
+
+    <!-- Label for order-by magnitude option [CHAR LIMIT=20] -->
+    <string name="settings_category_by_sport_label">体育</string>
+    <string name="settings_category_by_sport_value" translatable="false">sport</string>
+
+    <!-- Label for order-by magnitude option [CHAR LIMIT=20] -->
+    <string name="settings_category_by_tech_label">科技</string>
+    <string name="settings_category_by_tech_value" translatable="false">tech</string>
+
+    <!-- Label for order-by magnitude option [CHAR LIMIT=20] -->
+    <string name="settings_category_by_edu_label">教育</string>
+    <string name="settings_category_by_edu_value" translatable="false">edu</string>
+
+    <!-- Label for order-by magnitude option [CHAR LIMIT=20] -->
+    <string name="settings_category_by_ent_label">娱乐</string>
+    <string name="settings_category_by_ent_value" translatable="false">ent</string>
+
+    <!-- Label for order-by magnitude option [CHAR LIMIT=20] -->
+    <string name="settings_category_by_finance_label">金融</string>
+    <string name="settings_category_by_finance_value" translatable="false">money</string>
+
+    <!-- Label for order-by magnitude option [CHAR LIMIT=20] -->
+    <string name="settings_category_by_stock_label">股票</string>
+    <string name="settings_category_by_stock_value" translatable="false">gupiao</string>
+
+    <!-- Label for order-by magnitude option [CHAR LIMIT=20] -->
+    <string name="settings_category_by_travel_label">旅游</string>
+    <string name="settings_category_by_travel_value" translatable="false">travel</string>
+
+    <!-- Label for order-by magnitude option [CHAR LIMIT=20] -->
+    <string name="settings_category_by_woman_label">女人</string>
+    <string name="settings_category_by_woman_value" translatable="false">lady</string>
+
+
+
+
 </resources>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="settings_order_by_labels">
+        <item>@string/settings_category_by_war_label</item>
+        <item>@string/settings_category_by_sport_label</item>
+        <item>@string/settings_category_by_tech_label</item>
+        <item>@string/settings_category_by_edu_label</item>
+        <item>@string/settings_category_by_ent_label</item>
+        <item>@string/settings_category_by_finance_label</item>
+        <item>@string/settings_category_by_stock_label</item>
+        <item>@string/settings_category_by_travel_label</item>
+        <item>@string/settings_category_by_woman_label</item>
+    </string-array>
+
+    <string-array name="settings_order_by_values">
+        <item>@string/settings_category_by_war_value</item>
+        <item>@string/settings_category_by_sport_value</item>
+        <item>@string/settings_category_by_tech_value</item>
+        <item>@string/settings_category_by_edu_value</item>
+        <item>@string/settings_category_by_ent_value</item>
+        <item>@string/settings_category_by_finance_value</item>
+        <item>@string/settings_category_by_stock_value</item>
+        <item>@string/settings_category_by_travel_value</item>
+        <item>@string/settings_category_by_woman_value</item>
+    </string-array>
+</resources>

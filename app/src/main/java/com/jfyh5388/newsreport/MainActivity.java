@@ -96,7 +96,12 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
     @Override
     public Loader<List<News>> onCreateLoader(int i, Bundle bundle) {
 
-//        SharedPreferences sharedPrefs = PreferenceManager.getDefaultSharedPreferences(this);
+        SharedPreferences sharedPrefs = PreferenceManager.getDefaultSharedPreferences(this);
+        String categoryBy = sharedPrefs.getString(
+                getString(R.string.settings_category_by_key),
+                getString(R.string.settings_category_by_default)
+        );
+
 //        String minMagnitude = sharedPrefs.getString(
 //                getString(R.string.settings_min_magnitude_key),
 //                getString(R.string.settings_min_magnitude_default));
@@ -109,17 +114,13 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
 //                getString(R.string.settings_item_number_key),
 //                getString(R.string.settings_item_number_default));
 //
-//        String orderBy = sharedPrefs.getString(
-//                getString(R.string.settings_order_by_key),
-//                getString(R.string.settings_order_by_default)
-//        );
 
         Uri baseUri = Uri.parse(USGS_REQUEST_URL);
         Uri.Builder uriBuilder = baseUri.buildUpon();
 
         //uriBuilder.appendQueryParameter("format", "geojson");
         uriBuilder.appendQueryParameter("limit", "10");
-        uriBuilder.appendQueryParameter("type", "war");
+        uriBuilder.appendQueryParameter("type", categoryBy);
         uriBuilder.appendQueryParameter("page", "1");
 //        uriBuilder.appendQueryParameter("orderby", orderBy);
 //        uriBuilder.appendQueryParameter("minlatitude", "3");
@@ -150,20 +151,20 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
         // 重置 Loader，以便能够清除现有数据。
         mAdapter.clear();
     }
-//    @Override
-//    public boolean onCreateOptionsMenu(Menu menu) {
-//        getMenuInflater().inflate(R.menu.main, menu);
-//        return true;
-//    }
-//
-//    @Override
-//    public boolean onOptionsItemSelected(MenuItem item) {
-//        int id = item.getItemId();
-//        if (id == R.id.action_settings) {
-//            Intent settingsIntent = new Intent(this, SettingsActivity.class);
-//            startActivity(settingsIntent);
-//            return true;
-//        }
-//        return super.onOptionsItemSelected(item);
-//    }
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.main, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        int id = item.getItemId();
+        if (id == R.id.action_settings) {
+            Intent settingsIntent = new Intent(this, SettingsActivity.class);
+            startActivity(settingsIntent);
+            return true;
+        }
+        return super.onOptionsItemSelected(item);
+    }
 }
