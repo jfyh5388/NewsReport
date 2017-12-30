@@ -16,16 +16,16 @@ public class News {
     private String mTitle;
 
     /** Time of the earthquake */
-    private String mTime;
+    private String mHit;
 
     private String mDocurl;
 
-    public News(Bitmap fBitmap, String fCategory, String fTitle, String fTime, String fUrl)
+    public News(Bitmap fBitmap, String fCategory, String fTitle, String fHit, String fUrl)
     {
         mBitmap = fBitmap;
         mCategory = fCategory;
         mTitle = fTitle;
-        mTime = fTime;
+        mHit = fHit;
         mDocurl = fUrl;;
     }
     public Bitmap getmBitmap()
@@ -40,41 +40,44 @@ public class News {
     {
         String catChinese = "";
         switch (mCategory) {
-            case "war":
-                catChinese = "战争";
-                break;
-            case "sport":
-                catChinese = "休育";
-                break;
-            case "tech":
-                catChinese = "科技";
-                break;
-            case "edu":
-                catChinese = "教育";
+            case "news":
+                catChinese = "新闻";
                 break;
             case "ent":
                 catChinese = "娱乐";
                 break;
+            case "sports":
+                catChinese = "体育";
+                break;
             case "money":
-                catChinese = "金融";
+                catChinese = "财经";
                 break;
-            case "gupiao":
-                catChinese = "股票";
+            case "tech":
+                catChinese = "科技";
                 break;
-            case "travel":
-                catChinese = "旅游";
+            case "auto":
+                catChinese = "汽车";
                 break;
             case "lady":
                 catChinese = "女人";
+                break;
+            case "travel":
+                catChinese = "房产";
+                break;
+            case "edu":
+                catChinese = "教育";
+                break;
+            case "video":
+                catChinese = "视频";
                 break;
             default:
                 break;
         }
         return catChinese;
     }
-    public String getmTime()
+    public String getmHit()
     {
-        return mTime;
+        return mHit;
     }
     public String getmUrl()
     {

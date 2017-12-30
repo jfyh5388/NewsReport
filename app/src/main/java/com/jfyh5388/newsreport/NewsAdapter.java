@@ -66,12 +66,12 @@ public class NewsAdapter extends ArrayAdapter<News> {
         TextView titleView = (TextView) listItemView.findViewById(R.id.title);
         titleView.setText(title);
 
-        // 根据地震时间（以毫秒为单位）创建一个新的 Date 对象
-        String time = currentNews.getmTime();
+        // 根据点击数创建一个新的 String 对象
+        String hit = currentNews.getmHit();
 
         // 找到视图 ID 为 date 的 TextView
-        TextView timeView = (TextView) listItemView.findViewById(R.id.time);
-        timeView.setText(time);
+        TextView timeView = (TextView) listItemView.findViewById(R.id.hit);
+        timeView.setText(hit);
 
 
         // Return the whole list item layout (containing 2 TextViews and an ImageView)
